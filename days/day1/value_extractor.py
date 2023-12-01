@@ -22,7 +22,6 @@ def get_sum(data):
     data = data.split('\n')
     sum = 0
     for row in data:
-        print(int(get_numbers(row)))
         sum += int(get_numbers(row))
     return sum
 
