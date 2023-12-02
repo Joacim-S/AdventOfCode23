@@ -1,10 +1,5 @@
+from data_reader import read_data
 
-
-def read_data(file):
-    with open(file) as input:
-        data = input.read()
-        return data
-    
 def get_numbers(row):
     digit1 = '0'
     digit2 = '0'
@@ -19,11 +14,10 @@ def get_numbers(row):
     return f'{digit1}{digit2}'
 
 def get_sum(data):
-    data = data.split('\n')
     sum = 0
     for row in data:
         sum += int(get_numbers(row))
     return sum
 
 if __name__ == '__main__':
-    print(get_sum(read_data('input.txt')))
+    print(get_sum(read_data('1.txt')))
